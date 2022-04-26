@@ -11,6 +11,8 @@
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
     "@nuxtjs/eslint-config-typescript": "^9.0.0",
     "@typescript-eslint/eslint-plugin": "^5.21.0",
     "@typescript-eslint/parser": "^5.21.0",
@@ -30,6 +32,6 @@
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown",
-    "*.{js,ts,tsx,vue}": "eslint --ext .tsx,.ts,.js,.vue --fix ./src"
+    "*.{js,ts,tsx,vue}": "eslint --ext .tsx,.ts,.js,.vue --fix"
   }
 }
