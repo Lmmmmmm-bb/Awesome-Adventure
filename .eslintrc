@@ -17,6 +17,7 @@
   },
   "plugins": ["vue", "@typescript-eslint"],
   "rules": {
-    "semi": "off"
+    "semi": "off",
+    "vue/singleline-html-element-content-newline": "off"
   }
 }
