@@ -1,16 +1,6 @@
 <script setup lang="ts">
 import { ElTabs, ElTabPane, ElSpace, ElLink, ElDivider } from 'element-plus';
-
-interface Data {
-  [key: string]: {
-    name: string;
-    url: string;
-    repo: string;
-    cate: string;
-  }[];
-}
-
-const awesome = await $fetch<Data>('/api/awesome');
+import awesome from '@/assets/awesome.json';
 
 const spacer = h(ElDivider, { direction: 'vertical' });
 </script>
@@ -23,7 +13,8 @@ const spacer = h(ElDivider, { direction: 'vertical' });
           <el-link
             v-for="item in awesome[key]"
             :key="item.url"
-            :href="item.repo"
+            :href="item.url"
+            target="_blank"
           >
             {{ item.name }}
           </el-link>
